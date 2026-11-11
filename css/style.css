@@ -344,3 +344,81 @@ body {
 
 /* Pagine vuote in preparazione (I Pilastri, Lo Staff): solo intestazione */
 .blank-page { min-height: 100vh; min-height: 100dvh; }
+
+/* Finestra di prenotazione */
+.booking {
+  width: min(32rem, calc(100% - 2rem));
+  max-height: calc(100dvh - 2rem);
+  overflow: auto;
+  margin: auto;
+  padding: clamp(1.4rem, 4vw, 2.2rem);
+  border: 0;
+  border-radius: 20px;
+  background: #fff;
+  color: #34453f;
+  font-family: "Quicksand", "Segoe UI", system-ui, sans-serif;
+  font-weight: 500;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+}
+.booking:focus-visible { outline: none; }
+.booking::backdrop { background: rgba(28, 61, 48, 0.5); backdrop-filter: blur(3px); }
+
+.booking h2 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--ink);
+}
+.booking .divider { margin: 0.7rem 0 1rem; }
+.booking-intro { margin: 0 0 1.2rem; font-size: 0.95rem; line-height: 1.55; }
+
+.booking-close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.8rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.booking-close:hover { background: #eef1f6; }
+
+.booking-form { display: grid; gap: 0.9rem; }
+.booking-form label { display: grid; gap: 0.3rem; font-size: 0.85rem; font-weight: 600; color: var(--ink); }
+.booking-form small { font-weight: 500; color: #7b8791; }
+.booking-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+
+.booking-form input[type="text"],
+.booking-form input[type="email"],
+.booking-form input[type="tel"],
+.booking-form textarea {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  border: 1.5px solid #d5dbe4;
+  border-radius: 12px;
+  background: #fbfcfe;
+  font: inherit;
+  font-weight: 500;
+  color: #243c33;
+}
+.booking-form textarea { resize: vertical; min-height: 6rem; }
+.booking-form input:focus,
+.booking-form textarea:focus { outline: 2px solid var(--orange); outline-offset: 1px; border-color: var(--orange); }
+
+.booking-form .booking-consent { display: flex; gap: 0.6rem; align-items: flex-start; font-weight: 500; font-size: 0.78rem; line-height: 1.45; color: #5a6770; }
+.booking-consent input { margin-top: 0.2rem; accent-color: var(--orange); flex: none; }
+
+.booking-status { margin: 0; min-height: 1.2em; font-size: 0.88rem; font-weight: 600; }
+.booking-status.ok { color: #1e7a4c; }
+.booking-status.error { color: #b3261e; }
+
+.booking-submit { justify-self: start; cursor: pointer; font-family: inherit; }
+.booking-submit:disabled { opacity: 0.6; cursor: default; }
+
+@media (max-width: 520px) { .booking-row { grid-template-columns: 1fr; } }
