@@ -161,7 +161,7 @@ body {
     rgba(255,255,255,0.22);
 }
 
-.hero-text { position: relative; z-index: 2; max-width: min(34rem, 100%); }
+.hero-text { position: relative; z-index: 2; max-width: min(38rem, 100%); }
 
 .badge {
   display: inline-flex;
@@ -196,6 +196,17 @@ body {
 }
 
 .actions { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+
+/* Schermi larghi: la foto parte sempre da sotto l'intestazione, così la testa del soggetto
+   non viene mai tagliata (la testa sta a circa 24% dell'altezza della foto). */
+@media (min-width: 761px) {
+  .photo {
+    inset: auto 0 auto 0;
+    top: calc(7rem - 35.65vw);
+    height: auto;
+    min-height: 100%;
+  }
+}
 
 @media (max-width: 760px) {
   .nav { display: none; }
