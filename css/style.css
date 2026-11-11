@@ -7,6 +7,12 @@
   src: url("../fonts/quicksand-300.woff2") format("woff2");
 }
 
+@font-face { font-family: "Quicksand"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/quicksand-500.woff2") format("woff2"); }
+@font-face { font-family: "Quicksand"; font-style: normal; font-weight: 600; font-display: swap; src: url("../fonts/quicksand-600.woff2") format("woff2"); }
+@font-face { font-family: "Quicksand"; font-style: normal; font-weight: 700; font-display: swap; src: url("../fonts/quicksand-700.woff2") format("woff2"); }
+/* Playfair Display (SIL Open Font License) per i titoli */
+@font-face { font-family: "Playfair Display"; font-style: normal; font-weight: 700; font-display: swap; src: url("../fonts/playfair-display-700.woff2") format("woff2"); }
+
 :root {
   --bg: #ffffff;
   --green: #1b5a45;
@@ -64,61 +70,139 @@ body {
   color: var(--grey);
 }
 
-/* Home: logo + testo in alto, fascia di foto a tutta larghezza in basso */
-.home {
+/* Home */
+:root { --ink: #1c3d30; }
+
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 10;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(1rem, 4vw, 3rem) 0 clamp(9.5rem, 21vw, 17rem);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(6px);
+}
+
+.brand {
+  position: absolute;
+  top: 0;
+  left: clamp(0.75rem, 3vw, 2.5rem);
+  display: block;
+  width: clamp(120px, 16vw, 200px);
+  padding: 0.5rem 0.75rem 0.6rem;
+  background: #fff;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
+}
+.brand img { display: block; width: 100%; height: auto; }
+
+.nav { display: flex; gap: clamp(1rem, 3vw, 2.5rem); margin: 0 auto; }
+.nav a {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.35rem 0;
+  border-bottom: 2px solid transparent;
+}
+.nav a:hover, .nav a.active { border-bottom-color: var(--orange); }
+
+.btn {
+  display: inline-block;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: 2px solid transparent;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.btn-small { padding: 0.55rem 1.2rem; font-size: 0.85rem; }
+.btn-orange { background: var(--orange); color: #fff; }
+.btn-orange:hover { background: #bd6a24; }
+.btn-outline { background: #fff; color: var(--ink); border-color: var(--ink); }
+.btn-outline:hover { background: var(--ink); color: #fff; }
+
+.hero {
+  position: relative;
   min-height: 100vh;
   min-height: 100dvh;
   display: flex;
-  flex-direction: column;
-}
-
-.intro {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: clamp(0.75rem, 2.5vw, 1.5rem);
-  padding: clamp(1.5rem, 5vh, 3rem) 1.25rem;
-  text-align: center;
-}
-
-.band {
-  position: relative;
-  width: 100%;
-  height: clamp(220px, 45vh, 480px);
+  padding: 6.5rem clamp(1.25rem, 6vw, 5rem) 3rem;
   overflow: hidden;
-  background: #efefef;
+  background: #e9efe9;
+  font-weight: 500;
 }
 
-/* Dissolvenza incrociata in puro CSS: 5 foto, 6 secondi ciascuna, ciclo di 30 secondi */
-.slide {
+.photo {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0;
-  animation: slide-fade 30s linear infinite;
+  object-position: 50% 36%;
+  z-index: 0;
 }
 
-.s1 { animation-delay: -1s; object-position: 70% 35%; }
-.s2 { animation-delay: 6s;  object-position: 50% 35%; }
-.s3 { animation-delay: 12s; object-position: 50% 30%; }
-.s4 { animation-delay: 18s; object-position: 50% 38%; }
-.s5 { animation-delay: 24s; object-position: 50% 72%; }
-
-@keyframes slide-fade {
-  0%      { opacity: 0; }
-  3.33%   { opacity: 1; }
-  23.33%  { opacity: 1; }
-  26.67%  { opacity: 0; }
-  100%    { opacity: 0; }
+/* Velo chiaro sulla foto: più fitto a sinistra, dove sta il testo */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.3) 55%, rgba(255,255,255,0.12) 100%),
+    rgba(255,255,255,0.22);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .slide { animation: none; }
-  .s1 { opacity: 1; }
+.hero-text { position: relative; z-index: 2; max-width: min(34rem, 100%); }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0 0 1.1rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--ink);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.hero h1 {
+  margin: 0 0 1rem;
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  font-size: clamp(2.1rem, 4.4vw, 3.6rem);
+  line-height: 1.15;
+  color: var(--ink);
+}
+
+.lead-text {
+  margin: 0 0 1.75rem;
+  max-width: 30rem;
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+  line-height: 1.6;
+  color: #243c33;
+}
+
+.actions { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+
+@media (max-width: 760px) {
+  .nav { display: none; }
+  .site-header { height: 4rem; }
+  .hero { align-items: flex-end; padding-top: 5.5rem; }
+  .hero::before {
+    background: linear-gradient(0deg, rgba(255,255,255,0.88) 0%, rgba(255,255,255,0.7) 45%, rgba(255,255,255,0.2) 100%);
+  }
+  .photo { object-position: 50% 20%; }
 }
 
 /* Pagina 404 */

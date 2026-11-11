@@ -4,17 +4,17 @@ Sito vetrina di [www.codeallaria.com](https://www.codeallaria.com), in HTML e CS
 
 ## Struttura
 
-- `index.html`: pagina principale (logo, scritta "Stiamo Arrivando" e fascia a tutta larghezza con foto di cani che si alternano, solo CSS)
+- `index.html`: pagina principale (header con menu, foto a tutta pagina, titolo, testo e pulsanti)
 - `404.html`: pagina di errore
 - `css/style.css`: stili
-- `fonts/`: Quicksand 300 (licenza SIL OFL), inclusa nel sito
-- `images/`: logo (`logo.jpg`), versione quadrata per icona e anteprime (`logo-quadrato.jpg`) e foto della fascia (`slide-N-1920.jpg` / `slide-N-960.jpg`)
+- `fonts/`: Quicksand e Playfair Display (licenza SIL OFL), incluse nel sito
+- `images/`: logo (`logo.jpg`), versione quadrata per icona e anteprime (`logo-quadrato.jpg`), foto reali (`real-N.jpg`) e foto stock non in uso (`slide-N-*.jpg`)
 - `CNAME`: dominio personalizzato per GitHub Pages
 - `.nojekyll`: disattiva l'elaborazione Jekyll
 
 ## Crediti foto
 
-Le foto della fascia sono pubblicate su [Unsplash](https://unsplash.com) con licenza Unsplash (uso libero, anche commerciale; l'attribuzione non è obbligatoria ma è riportata qui):
+Le foto `real-1..3.jpg` sono di Code all'Aria. Le foto stock `slide-N-*.jpg` (al momento non usate nel sito) sono pubblicate su [Unsplash](https://unsplash.com) con licenza Unsplash (uso libero, anche commerciale; l'attribuzione non è obbligatoria ma è riportata qui):
 
 1. Joe Caione ([@joeyc](https://unsplash.com/@joeyc)), [foto](https://unsplash.com/photos/19889db9621e)
 2. Richard Laursen ([@richard1975](https://unsplash.com/@richard1975)), [foto](https://unsplash.com/photos/5686aa34cf75)
