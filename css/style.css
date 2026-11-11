@@ -161,7 +161,7 @@ body {
     rgba(255,255,255,0.22);
 }
 
-.hero-text { position: relative; z-index: 2; max-width: min(38rem, 100%); }
+.hero-text { position: relative; z-index: 2; max-width: min(34rem, 100%); }
 
 .badge {
   display: inline-flex;
@@ -196,36 +196,6 @@ body {
 }
 
 .actions { display: flex; flex-wrap: wrap; gap: 0.8rem; }
-
-/* Sfondo sfocato della stessa foto: serve solo sugli schermi larghi (vedi sotto) */
-.photo-bg { display: none; }
-
-/* Schermi larghi: la foto ha una dimensione fissa (non si ingrandisce né si rimpicciolisce
-   con la finestra). Se la finestra è più larga, ai lati resta lo sfondo sfocato. */
-@media (min-width: 761px) {
-  /* il testo resta allineato alla foto anche quando la finestra è più larga di 1280px */
-  .hero { padding-left: max(clamp(1.25rem, 6vw, 5rem), calc((100% - 1280px) / 2 + 5rem)); }
-  .photo-bg {
-    display: block;
-    position: absolute;
-    inset: -40px;
-    width: calc(100% + 80px);
-    height: calc(100% + 80px);
-    object-fit: cover;
-    object-position: 50% 36%;
-    filter: blur(28px) saturate(1.1);
-    z-index: 0;
-  }
-  .photo {
-    inset: 0 auto 0 50%;
-    width: 1280px;
-    max-width: none;
-    height: 100%;
-    transform: translateX(-50%);
-    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 140px, #000 calc(100% - 140px), transparent 100%);
-    mask-image: linear-gradient(90deg, transparent 0, #000 140px, #000 calc(100% - 140px), transparent 100%);
-  }
-}
 
 @media (max-width: 760px) {
   .nav { display: none; }
