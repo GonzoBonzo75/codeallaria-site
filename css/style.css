@@ -64,6 +64,63 @@ body {
   color: var(--grey);
 }
 
+/* Home: logo + testo in alto, fascia di foto a tutta larghezza in basso */
+.home {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.intro {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.75rem, 2.5vw, 1.5rem);
+  padding: clamp(1.5rem, 5vh, 3rem) 1.25rem;
+  text-align: center;
+}
+
+.band {
+  position: relative;
+  width: 100%;
+  height: clamp(220px, 45vh, 480px);
+  overflow: hidden;
+  background: #efefef;
+}
+
+/* Dissolvenza incrociata in puro CSS: 5 foto, 6 secondi ciascuna, ciclo di 30 secondi */
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: slide-fade 30s linear infinite;
+}
+
+.s1 { animation-delay: -1s; object-position: 70% 35%; }
+.s2 { animation-delay: 6s;  object-position: 50% 35%; }
+.s3 { animation-delay: 12s; object-position: 50% 30%; }
+.s4 { animation-delay: 18s; object-position: 50% 38%; }
+.s5 { animation-delay: 24s; object-position: 50% 72%; }
+
+@keyframes slide-fade {
+  0%      { opacity: 0; }
+  3.33%   { opacity: 1; }
+  23.33%  { opacity: 1; }
+  26.67%  { opacity: 0; }
+  100%    { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slide { animation: none; }
+  .s1 { opacity: 1; }
+}
+
 /* Pagina 404 */
 .coming-soon .lead {
   margin: 0;
