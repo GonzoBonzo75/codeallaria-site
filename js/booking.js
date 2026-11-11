@@ -1,4 +1,4 @@
-/* Finestra "Prenota una visita" con modulo di contatto.
+/* Finestra "Prenota un incontro" con modulo di contatto.
    Invio tramite Web3Forms (servizio gratuito, 250 richieste al mese).
    Per attivarlo: richiedere la chiave su https://web3forms.com con l'email che deve
    ricevere le richieste e incollarla qui sotto (la chiave è pubblica per natura). */
@@ -12,12 +12,12 @@
   dlg.setAttribute("aria-labelledby", "booking-title");
   dlg.innerHTML =
     '<button type="button" class="booking-close" aria-label="Chiudi">&times;</button>' +
-    '<h2 id="booking-title">Prenota una visita</h2>' +
+    '<h2 id="booking-title">Prenota un incontro</h2>' +
     '<span class="divider" aria-hidden="true"></span>' +
     '<p class="booking-intro">Raccontaci di te e del tuo cane: ti risponderemo il prima possibile.</p>' +
     '<form class="booking-form" novalidate>' +
       '<input type="hidden" name="access_key" value="">' +
-      '<input type="hidden" name="subject" value="Richiesta di prenotazione visita - Code all\'Aria">' +
+      '<input type="hidden" name="subject" value="Richiesta di incontro - Code all\'Aria">' +
       '<input type="hidden" name="from_name" value="Sito Code all\'Aria">' +
       '<input type="checkbox" name="botcheck" class="visually-hidden" tabindex="-1" autocomplete="off">' +
       '<label>Nome e cognome<input type="text" name="name" autocomplete="name" required></label>' +

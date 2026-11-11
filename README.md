@@ -5,8 +5,8 @@ Sito vetrina di [www.codeallaria.com](https://www.codeallaria.com), in HTML e CS
 ## Struttura
 
 - `index.html`: pagina principale (header con menu, foto a tutta pagina, titolo, testo e pulsanti)
-- `pilastri.html`: pagina "I Pilastri"
-- `staff.html`: pagina "Lo Staff"
+- `pilastri.html`: pagina "I pilastri"
+- `staff.html`: pagina "Lo staff"
 - `404.html`: pagina di errore
 - `css/style.css`: stili
 - `fonts/`: Quicksand e Playfair Display (licenza SIL OFL), incluse nel sito
