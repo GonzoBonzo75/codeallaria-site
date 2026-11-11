@@ -341,3 +341,6 @@ body {
 
 /* Pagine con sola foto (I Pilastri, Lo Staff) */
 .photo-only { flex-direction: column; justify-content: center; align-items: center; }
+
+/* Pagine vuote in preparazione (I Pilastri, Lo Staff): solo intestazione */
+.blank-page { min-height: 100vh; min-height: 100dvh; }
