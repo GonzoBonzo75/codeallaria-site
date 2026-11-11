@@ -4,9 +4,10 @@ Sito vetrina di [www.codeallaria.com](https://www.codeallaria.com), in HTML e CS
 
 ## Struttura
 
-- `index.html`: pagina principale
+- `index.html`: pagina principale (per ora "Stiamo Arrivando!" con il logo)
 - `404.html`: pagina di errore
 - `css/style.css`: stili
+- `images/`: logo (`logo.jpg`) e versione quadrata per icona e anteprime (`logo-quadrato.jpg`)
 - `CNAME`: dominio personalizzato per GitHub Pages
 - `.nojekyll`: disattiva l'elaborazione Jekyll
 
