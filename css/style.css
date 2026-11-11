@@ -338,3 +338,6 @@ body {
 }
 .staff-text .lead-strong { font-size: 1.02rem; color: #34453f; }
 .staff-text .small { font-size: 0.9rem; }
+
+/* Pagine con sola foto (I Pilastri, Lo Staff) */
+.photo-only { flex-direction: column; justify-content: center; align-items: center; }
