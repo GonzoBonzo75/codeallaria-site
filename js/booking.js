@@ -3,7 +3,7 @@
    Per attivarlo: richiedere la chiave su https://web3forms.com con l'email che deve
    ricevere le richieste e incollarla qui sotto (la chiave è pubblica per natura). */
 (function () {
-  var ACCESS_KEY = "f4c8ebf7-5770-46dd-b211-ea77ed56898d";
+  var ACCESS_KEY = "68d38301-8b98-45d1-a126-e54e0aa5eee6";
   var ENDPOINT = "https://api.web3forms.com/submit";
 
   var dlg = document.createElement("dialog");
