@@ -324,15 +324,18 @@ body {
 
 /* Pagina "I Pilastri": testo centrato su un prato sfumato */
 .pillars-prato {
-  color: #2b3f37;
+  align-items: flex-start;
+  padding-top: 8.5rem;
+  color: #1c3d30;
   background:
-    linear-gradient(180deg, rgba(247,249,252,0.8) 0%, rgba(247,249,252,0.55) 40%, rgba(247,249,252,0.45) 100%),
-    url("../images/prato-sfumato.jpg") center / cover no-repeat,
-    #dfe9d3;
+    radial-gradient(ellipse 52% 46% at 50% 40%, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.5) 55%, rgba(255,255,255,0) 100%),
+    linear-gradient(180deg, rgba(247,249,252,0.35) 0%, rgba(247,249,252,0.05) 100%),
+    url("../images/prato.jpg") center bottom / cover no-repeat,
+    #7fb35a;
 }
 .pillars-prato .pillars-inner { display: block; max-width: 46rem; text-align: center; }
-.pillars-prato .divider { margin: 1.1rem auto 1.6rem; }
-.pillars-prato p { font-size: 1.05rem; color: #243c33; text-wrap: balance; }
+.pillars-prato .divider { margin: 1.1rem auto 2rem; }
+.pillars-prato p { font-size: 1.05rem; color: #1c3d30; text-wrap: balance; }
 .pillars-prato .values {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1.5rem 1rem;
@@ -344,11 +347,32 @@ body {
 .pillars-prato .icon svg { width: 1.55rem; height: 1.55rem; }
 .pillars-prato .values strong { font-size: 1.08rem; }
 .pillars-prato .values small { font-size: 0.92rem; }
-.pillars-prato .values-note { margin: 2.25rem 0 0; }
+.pillars-prato .values + p { margin-top: 2.25rem; }
+.pillars-prato .pillars-logo {
+  display: block;
+  box-sizing: border-box;
+  width: clamp(120px, 16vw, 200px);
+  height: auto;
+  margin: 4.5rem auto 0;
+  padding: 0.5rem 0.75rem 0.6rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
+}
+.pillars-prato .values-text { max-width: 40rem; margin-left: auto; margin-right: auto; text-align: justify; text-wrap: wrap; hyphens: none; }
 .pillars-prato .icon { background: rgba(255, 255, 255, 0.85); }
 
 @media (max-width: 760px) {
-  .pillars-prato { align-items: center; padding-bottom: 3rem; }
+  .pillars-prato {
+    align-items: flex-start;
+    padding-top: 6.5rem;
+    padding-bottom: 3rem;
+    background:
+      radial-gradient(ellipse 110% 56% at 50% 52%, rgba(255,255,255,0.66) 0%, rgba(255,255,255,0.46) 60%, rgba(255,255,255,0) 100%),
+      linear-gradient(180deg, rgba(247,249,252,0.35) 0%, rgba(247,249,252,0.05) 100%),
+      url("../images/prato.jpg") center bottom / cover no-repeat,
+      #7fb35a;
+  }
   .pillars-prato .values { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 

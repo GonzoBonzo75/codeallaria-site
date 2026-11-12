@@ -24,7 +24,7 @@ Le foto `real-1..3.jpg` sono di Code all'Aria. Le foto stock `slide-N-*.jpg` (al
 4. Alvan Nee ([@alvannee](https://unsplash.com/@alvannee)), [foto](https://unsplash.com/photos/765934785570)
 5. Sue Winston ([@winniepix](https://unsplash.com/@winniepix)), [foto](https://unsplash.com/photos/db4a9b78f4ce)
 
-Lo sfondo sfumato `prato-sfumato.jpg` (pagina "I punti fermi") è ricavato dalla foto n. 3 (Alvan Nee), ritagliata sull'erba e sfocata.
+Lo sfondo `prato.jpg` (pagina "I punti fermi") è un'illustrazione originale, disegnata con uno script (fili d'erba su più livelli di profondità): non deriva da foto di terzi.
 
 ## Anteprima in locale
 
