@@ -111,6 +111,8 @@ body {
 }
 .nav a:hover, .nav a.active { border-bottom-color: var(--orange); }
 
+.nav-toggle { display: none; }
+
 .btn {
   display: inline-block;
   padding: 0.85rem 1.6rem;
@@ -587,4 +589,52 @@ body {
 .pillars-storia .storia-text {
   -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 26px), transparent 100%);
   mask-image: linear-gradient(to bottom, #000 calc(100% - 26px), transparent 100%);
+}
+
+/* Menu a tendina (schermi stretti) */
+@media (max-width: 760px) {
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 2.6rem;
+    height: 2.6rem;
+    padding: 0 0.6rem;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+  }
+  .nav-toggle span {
+    display: block;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--ink);
+    transition: transform 0.2s, opacity 0.2s;
+  }
+  .site-header.menu-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .site-header.menu-open .nav-toggle span:nth-child(2) { opacity: 0; }
+  .site-header.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .site-header.menu-open .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0.9rem 1.5rem 1rem 9.5rem;
+    background: #fff;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  }
+  .site-header.menu-open .nav a {
+    padding: 0.8rem 0;
+    font-size: 1.05rem;
+    border-bottom: 1px solid rgba(28, 61, 48, 0.1);
+  }
+  .site-header.menu-open .nav a:last-child { border-bottom: 0; }
+  .site-header.menu-open .nav a.active { color: var(--orange); }
 }
