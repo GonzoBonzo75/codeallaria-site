@@ -598,6 +598,7 @@ body {
   .header-prenota { display: none; }
   .theme-toggle { margin-left: auto; }
   .nav-toggle { margin-left: 0.2rem; }
+  .lang-toggle { width: 2.2rem; height: 2.2rem; }
   .nav-toggle {
     display: flex;
     flex-direction: column;
@@ -682,6 +683,27 @@ body {
 .theme-toggle .i-sun { display: none; }
 html[data-theme="dark"] .theme-toggle .i-sun { display: block; }
 html[data-theme="dark"] .theme-toggle .i-moon { display: none; }
+
+/* Interruttore lingua (IT / EN), accanto a quello chiaro/scuro */
+.lang-toggle {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-left: 0.15rem;
+  border: 1.6px solid var(--ink);
+  border-radius: 50%;
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  line-height: 1;
+  transition: background 0.2s, color 0.2s;
+}
+.lang-toggle:hover { background: var(--ink); color: #fff; }
+html[data-theme="dark"] .lang-toggle:hover { color: #0e1713; }
 
 /* Versione scura */
 html[data-theme="dark"] { color-scheme: dark; --ink: #e6efe9; --green: #86cfae; --grey: #cfd8d3; --bg: #0e1713; }

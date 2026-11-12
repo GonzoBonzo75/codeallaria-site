@@ -3,10 +3,13 @@
   var root = document.documentElement;
   var btn = document.querySelector(".theme-toggle");
   if (!btn) return;
+  var EN = root.lang === "en";
+  var LBL_LIGHT = EN ? "Switch back to light mode" : "Torna alla versione chiara";
+  var LBL_DARK = EN ? "Switch to dark mode" : "Attiva la versione scura";
   function sync() {
     var dark = root.getAttribute("data-theme") === "dark";
     btn.setAttribute("aria-pressed", dark ? "true" : "false");
-    btn.setAttribute("aria-label", dark ? "Torna alla versione chiara" : "Attiva la versione scura");
+    btn.setAttribute("aria-label", dark ? LBL_LIGHT : LBL_DARK);
   }
   sync();
   btn.addEventListener("click", function () {
@@ -22,11 +25,12 @@
   var header = document.querySelector(".site-header");
   var toggle = document.querySelector(".nav-toggle");
   if (!header || !toggle) return;
+  var EN = document.documentElement.lang === "en";
 
   function setOpen(open) {
     header.classList.toggle("menu-open", open);
     toggle.setAttribute("aria-expanded", open ? "true" : "false");
-    toggle.setAttribute("aria-label", open ? "Chiudi il menu" : "Apri il menu");
+    toggle.setAttribute("aria-label", open ? (EN ? "Close the menu" : "Chiudi il menu") : (EN ? "Open the menu" : "Apri il menu"));
   }
 
   toggle.addEventListener("click", function () {

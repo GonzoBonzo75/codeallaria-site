@@ -7,6 +7,8 @@ Sito vetrina di [www.codeallaria.com](https://www.codeallaria.com), in HTML e CS
 - `index.html`: pagina principale (header con menu, foto a tutta pagina, titolo, testo e pulsanti)
 - `pilastri.html`: pagina "I punti fermi"
 - `staff.html`: pagina "Lo staff"
+- `percorsi.html`, `storia.html`, `contatti.html`: le altre pagine del menu
+- `en/`: versione inglese del sito (stesse pagine: `index`, `values`, `paths`, `story`, `staff`, `contact`). Il pulsante rotondo "EN"/"IT" nell'header, accanto a quello chiaro/scuro, porta alla pagina corrispondente nell'altra lingua. Ogni pagina ha i link `hreflang` verso la sua gemella; `sitemap.xml` elenca tutte le pagine.
 - `404.html`: pagina di errore
 - `css/style.css`: stili
 - `fonts/`: Quicksand e Playfair Display (licenza SIL OFL), incluse nel sito

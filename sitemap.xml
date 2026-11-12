@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.codeallaria.com/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.codeallaria.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.codeallaria.com/en/"/>
+  </url>
+  <url>
+    <loc>https://www.codeallaria.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.codeallaria.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.codeallaria.com/en/"/>
+  </url>
+  <url>
+    <loc>https://www.codeallaria.com/pilastri.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.codeallaria.com/pilastri.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.codeallaria.com/en/values.html"/>
+  </url>
+  <url>
+    <loc>https://www.codeallaria.com/en/values.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.codeallaria.com/pilastri.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.codeallaria.com/en/values.html"/>
+  </url>
+  <url>
+    <loc>https://www.codeallaria.com/percorsi.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.codeallaria.com/percorsi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.codeallaria.com/en/paths.html"/>
+  </url>
+  <url>
+    <loc>https://www.codeallaria.com/en/paths.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.codeallaria.com/percorsi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.codeallaria.com/en/paths.html"/>
+  </url>
+  <url>
+    <loc>https://www.codeallaria.com/storia.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.codeallaria.com/storia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.codeallaria.com/en/story.html"/>
+  </url>
+  <url>
+    <loc>https://www.codeallaria.com/en/story.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.codeallaria.com/storia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.codeallaria.com/en/story.html"/>
+  </url>
+  <url>
+    <loc>https://www.codeallaria.com/staff.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.codeallaria.com/staff.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.codeallaria.com/en/staff.html"/>
+  </url>
+  <url>
+    <loc>https://www.codeallaria.com/en/staff.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.codeallaria.com/staff.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.codeallaria.com/en/staff.html"/>
+  </url>
+  <url>
+    <loc>https://www.codeallaria.com/contatti.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.codeallaria.com/contatti.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.codeallaria.com/en/contact.html"/>
+  </url>
+  <url>
+    <loc>https://www.codeallaria.com/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.codeallaria.com/contatti.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.codeallaria.com/en/contact.html"/>
+  </url>
+</urlset>
