@@ -322,6 +322,31 @@ body {
   .pillars-photo { aspect-ratio: 1 / 1; }
 }
 
+/* Pagina "I Pilastri": testo centrato su un prato sfumato */
+.pillars-prato {
+  color: #2b3f37;
+  background:
+    linear-gradient(180deg, rgba(247,249,252,0.8) 0%, rgba(247,249,252,0.55) 40%, rgba(247,249,252,0.45) 100%),
+    url("../images/prato-sfumato.jpg") center / cover no-repeat,
+    #dfe9d3;
+}
+.pillars-prato .pillars-inner { display: block; max-width: 46rem; text-align: center; }
+.pillars-prato .divider { margin: 1.1rem auto 1.6rem; }
+.pillars-prato p { font-size: 1.05rem; color: #243c33; text-wrap: balance; }
+.pillars-prato .values {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem 1rem;
+  margin-top: 2.25rem;
+}
+.pillars-prato .values li { flex-direction: column; text-align: center; gap: 0.6rem; }
+.pillars-prato .values small { color: #4a5c55; }
+.pillars-prato .icon { background: rgba(255, 255, 255, 0.85); }
+
+@media (max-width: 760px) {
+  .pillars-prato { align-items: center; padding-bottom: 3rem; }
+  .pillars-prato .values { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 /* Pagina "Lo Staff" */
 .staff-page { flex-direction: column; justify-content: center; align-items: stretch; }
 
