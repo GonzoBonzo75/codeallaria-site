@@ -71,7 +71,7 @@ body {
 }
 
 /* Home */
-:root { --ink: #1c3d30; }
+:root { --ink: #1c3d30; --footer-h: 5rem; }
 
 .site-header {
   position: fixed;
@@ -134,7 +134,7 @@ body {
   min-height: 100dvh;
   display: flex;
   align-items: center;
-  padding: 6.5rem clamp(1.25rem, 6vw, 5rem) 3rem;
+  padding: 6.5rem clamp(1.25rem, 6vw, 5rem) calc(var(--footer-h) + 1rem);
   overflow: hidden;
   background: #e9efe9;
   font-weight: 500;
@@ -246,7 +246,7 @@ body {
   min-height: 100dvh;
   display: flex;
   align-items: center;
-  padding: 7rem clamp(1.25rem, 6vw, 5rem) 4rem;
+  padding: 7rem clamp(1.25rem, 6vw, 5rem) calc(var(--footer-h) + 1rem);
   font-weight: 500;
   color: #5a6770;
 }
@@ -369,6 +369,21 @@ body {
 
 /* Pagine vuote in preparazione (I Pilastri, Lo Staff): solo intestazione */
 .blank-page { min-height: 100vh; min-height: 100dvh; }
+
+/* Piè di pagina: sfuma dal contenuto al bianco, sopra il fondo della pagina */
+.site-footer {
+  position: relative;
+  z-index: 3;
+  height: var(--footer-h);
+  margin-top: calc(-1 * var(--footer-h));
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 1rem 0.9rem;
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 55%, #fff 100%);
+  pointer-events: none;
+}
+.site-footer p { margin: 0; color: rgba(213, 122, 47, 0.78); font-size: 0.9rem; font-weight: 600; text-align: center; }
 
 /* Finestra di prenotazione */
 .booking {

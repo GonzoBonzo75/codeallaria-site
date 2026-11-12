@@ -5,7 +5,7 @@ Sito vetrina di [www.codeallaria.com](https://www.codeallaria.com), in HTML e CS
 ## Struttura
 
 - `index.html`: pagina principale (header con menu, foto a tutta pagina, titolo, testo e pulsanti)
-- `pilastri.html`: pagina "I pilastri"
+- `pilastri.html`: pagina "I punti fermi"
 - `staff.html`: pagina "Lo staff"
 - `404.html`: pagina di errore
 - `css/style.css`: stili
@@ -24,7 +24,7 @@ Le foto `real-1..3.jpg` sono di Code all'Aria. Le foto stock `slide-N-*.jpg` (al
 4. Alvan Nee ([@alvannee](https://unsplash.com/@alvannee)), [foto](https://unsplash.com/photos/765934785570)
 5. Sue Winston ([@winniepix](https://unsplash.com/@winniepix)), [foto](https://unsplash.com/photos/db4a9b78f4ce)
 
-Lo sfondo sfumato `prato-sfumato.jpg` (sezione "I pilastri") è ricavato dalla foto n. 3 (Alvan Nee), ritagliata sull'erba e sfocata.
+Lo sfondo sfumato `prato-sfumato.jpg` (pagina "I punti fermi") è ricavato dalla foto n. 3 (Alvan Nee), ritagliata sull'erba e sfocata.
 
 ## Anteprima in locale
 
