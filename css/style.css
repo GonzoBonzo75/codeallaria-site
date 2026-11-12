@@ -110,23 +110,7 @@ body {
   padding: 0.35rem 0;
   border-bottom: 2px solid transparent;
 }
-.nav a { position: relative; border-bottom: 0; }
-/* Sottolineatura: un filo d'erba ricurvo, arancione */
-.nav a::after {
-  content: "";
-  position: absolute;
-  left: -3px;
-  right: -3px;
-  bottom: -8px;
-  height: 13px;
-  background: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 22%22 preserveAspectRatio=%22none%22%3E%3Cpath fill=%22%23d57a2f%22 d=%22M100,13 C80,17 50,17 28,12.5 C14,9.5 5,5 0,1 C5,7.5 14,13.5 28,17.2 C52,22 82,21 100,13 Z%22/%3E%3C/svg%3E") center / 100% 100% no-repeat;
-  opacity: 0;
-  transform: scaleX(0.5);
-  transform-origin: left center;
-  transition: opacity 0.2s, transform 0.3s ease;
-  pointer-events: none;
-}
-.nav a:hover::after, .nav a.active::after { opacity: 1; transform: none; }
+.nav a:hover, .nav a.active { border-bottom-color: var(--orange); }
 
 .nav-toggle { display: none; }
 .nav .nav-prenota { display: none; }
@@ -656,7 +640,6 @@ body {
     font-size: 1.05rem;
     border-bottom: 1px solid rgba(28, 61, 48, 0.1);
   }
-  .site-header.menu-open .nav a::after { display: none; }
   .site-header.menu-open .nav a:hover { color: var(--orange); }
   .site-header.menu-open .nav a:last-child { border-bottom: 0; }
   .site-header.menu-open .nav a.active { color: var(--orange); }
