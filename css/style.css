@@ -113,6 +113,7 @@ body {
 .nav a:hover, .nav a.active { border-bottom-color: var(--orange); }
 
 .nav-toggle { display: none; }
+.nav .nav-prenota { display: none; }
 
 .btn {
   display: inline-block;
@@ -594,6 +595,8 @@ body {
 /* Menu a tendina (schermi stretti) */
 @media (max-width: 1100px) {
   .nav { display: none; }
+  .header-prenota { display: none; }
+  .nav-toggle { margin-left: auto; }
   .nav-toggle {
     display: flex;
     flex-direction: column;
@@ -638,4 +641,7 @@ body {
   }
   .site-header.menu-open .nav a:last-child { border-bottom: 0; }
   .site-header.menu-open .nav a.active { color: var(--orange); }
+}
+@media (max-width: 1100px) {
+  .site-header.menu-open .nav .nav-prenota { display: block; }
 }
