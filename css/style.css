@@ -759,3 +759,13 @@ html[data-theme="dark"] .booking-form textarea { background: #0e1713; color: #e6
   html[data-theme="dark"] .site-header.menu-open .nav { background: #15231c; box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5); }
   html[data-theme="dark"] .site-header.menu-open .nav a { border-bottom-color: rgba(255, 255, 255, 0.1); }
 }
+
+/* Logo per la versione scura: stesso disegno su fondo trasparente */
+.logo-dark, .brand .logo-dark { display: none; }
+.pillars-prato .pillars-logo.logo-dark { display: none; }
+html[data-theme="dark"] .logo-light,
+html[data-theme="dark"] .pillars-prato .pillars-logo.logo-light { display: none; }
+html[data-theme="dark"] .brand .logo-dark { display: block; width: 100%; height: auto; }
+html[data-theme="dark"] .pillars-prato .pillars-logo.logo-dark { display: block; }
+html[data-theme="dark"] .brand { background: #14221b; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5); }
+html[data-theme="dark"] .pillars-prato .pillars-logo { background: rgba(14, 24, 19, 0.82); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45); }
