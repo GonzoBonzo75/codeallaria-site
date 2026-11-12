@@ -23,6 +23,8 @@
 * { box-sizing: border-box; }
 
 html, body { height: 100%; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 body {
   margin: 0;
@@ -272,7 +274,7 @@ body {
   box-shadow: 0 18px 40px rgba(28, 61, 48, 0.18);
 }
 
-.pillars h1 {
+.pillars h1, .pillars h2 {
   margin: 0;
   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
   font-weight: 700;
@@ -321,6 +323,15 @@ body {
   .pillars-inner { grid-template-columns: 1fr; }
   .pillars-photo { aspect-ratio: 1 / 1; }
 }
+
+/* "I pilastri" come sezione della home (scorre sotto l'hero) */
+.pillars.in-page {
+  min-height: 0;
+  padding: clamp(3.5rem, 8vw, 6rem) clamp(1.25rem, 6vw, 5rem);
+  background: #f7f9fc;
+  scroll-margin-top: 4.5rem;
+}
+.hero { scroll-margin-top: 0; }
 
 /* Pagina "Lo Staff" */
 .staff-page { flex-direction: column; justify-content: center; align-items: stretch; }
