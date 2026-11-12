@@ -340,6 +340,11 @@ body {
 }
 .pillars-prato .values li { flex-direction: column; text-align: center; gap: 0.6rem; }
 .pillars-prato .values small { color: #4a5c55; }
+.pillars-prato .icon { width: 3.4rem; height: 3.4rem; }
+.pillars-prato .icon svg { width: 1.55rem; height: 1.55rem; }
+.pillars-prato .values strong { font-size: 1.08rem; }
+.pillars-prato .values small { font-size: 0.92rem; }
+.pillars-prato .values-note { margin: 2.25rem 0 0; }
 .pillars-prato .icon { background: rgba(255, 255, 255, 0.85); }
 
 @media (max-width: 760px) {
