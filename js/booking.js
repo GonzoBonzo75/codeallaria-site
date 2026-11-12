@@ -26,7 +26,7 @@
         '<label><span>Telefono <small>(facoltativo)</small></span><input type="tel" name="phone" autocomplete="tel"></label>' +
       '</div>' +
       '<label><span>Nome del cane <small>(facoltativo)</small></span><input type="text" name="dog"></label>' +
-      '<label>Messaggio<textarea name="message" rows="4" required placeholder="Ad esempio: giorni e orari che preferisci, età e razza del cane, cosa vorresti lavorare insieme."></textarea></label>' +
+      '<label>Messaggio<textarea name="message" rows="4" required></textarea></label>' +
       '<label class="booking-consent"><input type="checkbox" name="consent" required> <span>Acconsento al trattamento dei miei dati per essere ricontattato. I dati vengono inviati tramite il servizio Web3Forms e usati solo per rispondere alla richiesta.</span></label>' +
       '<p class="booking-status" role="status" aria-live="polite"></p>' +
       '<button type="submit" class="btn btn-orange booking-submit">Invia richiesta</button>' +
