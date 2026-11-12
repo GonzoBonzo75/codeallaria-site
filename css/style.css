@@ -540,3 +540,51 @@ body {
   }
   .pillars-storia .storia-text p { font-size: 0.98rem; text-align: left; }
 }
+
+/* La nostra storia: pagina a schermo intero, il testo scorre in un riquadro senza barra */
+.pillars-prato.pillars-storia {
+  height: 100vh;
+  height: 100dvh;
+  min-height: 0;
+  overflow: hidden;
+  padding-bottom: calc(var(--footer-h) + 0.5rem);
+}
+.pillars-prato.pillars-storia .pillars-inner {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-height: 0;
+}
+.pillars-storia h1,
+.pillars-storia .divider { flex: 0 0 auto; }
+.pillars-prato.pillars-storia .divider { margin-bottom: 1.6rem; }
+.pillars-storia .storia-text {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.pillars-storia .storia-text::-webkit-scrollbar { display: none; }
+.pillars-storia .storia-text:focus { outline: none; }
+.pillars-storia .storia-text:focus-visible { outline: 2px solid rgba(213, 122, 47, 0.7); outline-offset: 3px; }
+.pillars-storia .storia-text .pillars-logo { margin: 2.2rem auto 0.2rem; }
+@media (max-width: 760px) {
+  .pillars-prato.pillars-storia { padding-bottom: calc(var(--footer-h) + 0.25rem); }
+  .pillars-prato.pillars-storia .divider { margin-bottom: 1.1rem; }
+}
+.pillars-storia .storia-foto {
+  width: auto;
+  max-width: 100%;
+  height: min(25rem, 36vh);
+  height: min(25rem, 36dvh);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+.pillars-storia .storia-text {
+  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 26px), transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 26px), transparent 100%);
+}
