@@ -502,3 +502,41 @@ body {
 .booking-submit:disabled { opacity: 0.6; cursor: default; }
 
 @media (max-width: 520px) { .booking-row { grid-template-columns: 1fr; } }
+
+/* Pagina "La nostra storia": stesso prato, testo lungo su pannello chiaro */
+.pillars-prato.pillars-storia {
+  background:
+    linear-gradient(180deg, rgba(247,249,252,0.35) 0%, rgba(247,249,252,0.05) 100%),
+    url("../images/prato.jpg") center bottom / cover no-repeat,
+    #7fb35a;
+}
+.pillars-storia .pillars-inner { max-width: 48rem; }
+.storia-text {
+  padding: clamp(1.4rem, 4vw, 2.4rem);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.74);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 10px 34px rgba(28, 61, 48, 0.12);
+  text-align: justify;
+  hyphens: none;
+}
+.storia-foto {
+  display: block;
+  width: min(20rem, 100%);
+  height: auto;
+  margin: 0 auto 1.6rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(28, 61, 48, 0.18);
+}
+.pillars-storia .storia-text p { margin: 0 0 1.1rem; text-wrap: wrap; font-size: 1.02rem; line-height: 1.75; }
+.pillars-storia .storia-text p:last-child { margin-bottom: 0; }
+@media (max-width: 760px) {
+  .pillars-prato.pillars-storia {
+    background:
+      linear-gradient(180deg, rgba(247,249,252,0.35) 0%, rgba(247,249,252,0.05) 100%),
+      url("../images/prato.jpg") center bottom / cover no-repeat,
+      #7fb35a;
+  }
+  .pillars-storia .storia-text p { font-size: 0.98rem; text-align: left; }
+}
