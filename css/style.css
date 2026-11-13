@@ -787,3 +787,58 @@ html[data-theme="dark"] .pillars-prato .pillars-logo { background: rgba(14, 24, 
 html[data-theme="dark"] .pillars-contatti .booking-status.ok { color: #6fd6a2; }
 html[data-theme="dark"] .pillars-contatti .booking-status.error { color: #ff8a80; }
 .pillars-contatti .contatti-card .booking-status:empty { display: none; }
+
+/* Pagina "Lo staff": due riquadri separati, uno per persona */
+.pillars-staff .staff-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1rem, 3vw, 1.8rem);
+  align-content: start;
+  padding: 0 0 1rem;
+  background: none;
+  box-shadow: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  text-align: center;
+}
+.staff-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(1.4rem, 3vw, 2.2rem) clamp(1rem, 2.5vw, 1.8rem);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.74);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 10px 34px rgba(28, 61, 48, 0.12);
+}
+.staff-avatar {
+  display: grid;
+  place-items: center;
+  width: clamp(6.5rem, 14vw, 9rem);
+  aspect-ratio: 1;
+  margin-bottom: 1.1rem;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #2f6b52, #1c3d30);
+  color: #fff;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(2.6rem, 6vw, 3.6rem);
+  box-shadow: 0 8px 22px rgba(28, 61, 48, 0.25);
+}
+.staff-card h2 {
+  margin: 0 0 0.5rem;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 700;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  color: var(--ink);
+}
+.pillars-staff .staff-card .staff-role { margin: 0.1rem 0 0; font-size: 0.98rem; font-weight: 600; color: #b4611b; text-wrap: balance; }
+.pillars-staff .staff-grid .pillars-logo { grid-column: 1 / -1; margin: 1.6rem auto 0.2rem; }
+@media (max-width: 760px) {
+  .pillars-staff .staff-grid { grid-template-columns: 1fr; }
+}
+html[data-theme="dark"] .staff-card { background: rgba(14, 24, 19, 0.8); box-shadow: 0 10px 34px rgba(0, 0, 0, 0.4); }
+html[data-theme="dark"] .pillars-staff .staff-card .staff-role { color: #f0a15e; }
+html[data-theme="dark"] .pillars-staff .staff-grid { background: none; box-shadow: none; }
+html[data-theme="dark"] html[data-theme="dark"] html[data-theme="dark"] .staff-avatar { background: linear-gradient(145deg, #3f8a6b, #1f4a38); }

@@ -42,16 +42,40 @@
     <button class="nav-toggle" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="menu-principale"><span></span><span></span><span></span></button>
   </header>
 
-  <main class="pillars pillars-prato pillars-vuota">
+  <main class="pillars pillars-prato pillars-storia pillars-staff">
     <div class="pillars-inner">
-      <h1 class="visually-hidden">Lo staff</h1>
-      <img class="pillars-logo logo-light" src="images/logo.jpg" width="1489" height="835" alt="Code all'Aria - Crescere Insieme, Percorsi Evolutivi per Cani">
-      <img class="pillars-logo logo-dark" src="images/logo-scuro.png" width="800" height="449" alt="" aria-hidden="true">
+      <h1>Lo staff</h1>
+      <span class="divider" aria-hidden="true"></span>
+      <div class="storia-text staff-grid" role="region" aria-label="Lo staff">
+        <article class="staff-card">
+          <div class="staff-avatar" aria-hidden="true">O</div>
+          <h2>Ombretta</h2>
+          <p class="staff-role">Addestratrice ENCI</p>
+        </article>
+        <article class="staff-card">
+          <div class="staff-avatar" aria-hidden="true">B</div>
+          <h2>Barbara</h2>
+          <p class="staff-role">Educatrice cinofila CSEN</p><p class="staff-role">Educatrice nell’ambito della disabilità</p>
+        </article>
+        <img class="pillars-logo logo-light" src="images/logo.jpg" width="1489" height="835" alt="Code all'Aria - Crescere Insieme, Percorsi Evolutivi per Cani">
+        <img class="pillars-logo logo-dark" src="images/logo-scuro.png" width="800" height="449" alt="" aria-hidden="true">
+      </div>
     </div>
   </main>
   <footer class="site-footer">
     <p>Code all'Aria - tutti i diritti riservati - 2026</p>
   </footer>
+  <script>
+    (function () {
+      var main = document.querySelector(".pillars-storia");
+      var frame = document.querySelector(".storia-text");
+      if (!main || !frame) return;
+      main.addEventListener("wheel", function (e) {
+        if (frame.contains(e.target)) return;
+        frame.scrollTop += e.deltaY;
+      }, { passive: true });
+    })();
+  </script>
   <script src="js/nav.js" defer></script>
   <script src="js/booking.js" defer></script>
 </body>
