@@ -872,3 +872,28 @@ html[data-theme="dark"] .percorso-circle { background: rgba(214, 236, 224, 0.14)
 html[data-theme="dark"] .percorso-title { color: #e6f1ea; }
 @media (max-width: 480px) { .percorsi-grid { gap: 1.2rem 0.5rem; } .percorso-title { font-size: 0.95rem; } }
 html[data-theme="dark"] .pillars-percorsi .percorsi-frame { background: none; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; }
+
+/* Cerchi cliccabili e scheda del percorso */
+.percorso-open { all: unset; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; gap: 0.8rem; cursor: pointer; border-radius: 14px; text-align: center; }
+.percorso-open:focus-visible { outline: 2px solid var(--orange); outline-offset: 6px; }
+.percorso-open .percorso-circle { transition: transform 0.18s ease, box-shadow 0.18s ease; }
+.percorso-open:hover .percorso-circle, .percorso-open:focus-visible .percorso-circle { transform: scale(1.07); box-shadow: 0 0 0 3px var(--orange), 0 8px 22px rgba(28, 61, 48, 0.2); }
+.percorso-dialog { width: min(54rem, calc(100% - 2rem)); padding: 0; overflow: hidden; position: fixed; }
+.percorso-dialog[open] { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); }
+.percorso-photo { width: 100%; height: 100%; max-height: calc(100dvh - 2rem); object-fit: cover; object-position: 50% 55%; display: block; }
+.percorso-body { padding: clamp(1.4rem, 4vw, 2.4rem); overflow-y: auto; max-height: calc(100dvh - 2rem); align-self: center; }
+.percorso-body p { margin: 0 0 1rem; font-size: 1rem; line-height: 1.7; }
+.percorso-body p:last-child { margin-bottom: 0; }
+.percorso-dialog .booking-close { z-index: 1; background: rgba(255, 255, 255, 0.92); }
+@media (max-width: 700px) {
+  .percorso-dialog[open] { display: block; overflow-y: auto; }
+  .percorso-photo { height: 38vh; max-height: none; }
+  .percorso-body { max-height: none; }
+}
+html[data-theme="dark"] .percorso-dialog .booking-close { background: rgba(21, 35, 28, 0.85); color: #e6f1ea; }
+html[data-theme="dark"] .percorso-dialog h2 { color: #e6f1ea; }
+
+/* Scheda con foto orizzontale: colonne uguali per far stare tutti i cani */
+.percorso-dialog.percorso-flip[open] { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.percorso-flip .percorso-photo { object-position: 22% 50%; }
+@media (max-width: 700px) { .percorso-flip .percorso-photo { object-position: 30% 40%; } }
