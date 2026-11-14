@@ -841,4 +841,34 @@ html[data-theme="dark"] .pillars-contatti .booking-status.error { color: #ff8a80
 html[data-theme="dark"] .staff-card { background: rgba(14, 24, 19, 0.8); box-shadow: 0 10px 34px rgba(0, 0, 0, 0.4); }
 html[data-theme="dark"] .pillars-staff .staff-card .staff-role { color: #f0a15e; }
 html[data-theme="dark"] .pillars-staff .staff-grid { background: none; box-shadow: none; }
-html[data-theme="dark"] html[data-theme="dark"] html[data-theme="dark"] .staff-avatar { background: linear-gradient(145deg, #3f8a6b, #1f4a38); }
+html[data-theme="dark"] .staff-avatar { background: linear-gradient(145deg, #3f8a6b, #1f4a38); }
+
+/* Pagina "I nostri percorsi": nove cerchi, come quelli de "I punti fermi" ma più grandi */
+.pillars-percorsi .percorsi-frame { background: none; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; padding: 0 0 1rem; text-align: center; }
+.percorsi-grid {
+  list-style: none;
+  margin: 0.5rem auto 0;
+  padding: 0;
+  max-width: 38rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, min(4vw, 3.4vh), 2.2rem) 1rem;
+}
+.percorsi-grid li { display: flex; flex-direction: column; align-items: center; gap: 0.8rem; }
+.percorso-circle {
+  display: grid;
+  place-items: center;
+  width: clamp(4.4rem, min(12vw, 11vh), 6.4rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #eaeef5;
+  color: var(--ink);
+  box-shadow: 0 6px 18px rgba(28, 61, 48, 0.14);
+}
+.percorso-circle svg { width: 42%; height: 42%; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.percorso-title { font-size: 1.05rem; font-weight: 700; color: var(--ink); line-height: 1.25; text-wrap: balance; }
+.pillars-percorsi .percorsi-frame .pillars-logo { margin-top: 4.5rem; }
+html[data-theme="dark"] .percorso-circle { background: rgba(214, 236, 224, 0.14); color: #d6ece0; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35); }
+html[data-theme="dark"] .percorso-title { color: #e6f1ea; }
+@media (max-width: 480px) { .percorsi-grid { gap: 1.2rem 0.5rem; } .percorso-title { font-size: 0.95rem; } }
+html[data-theme="dark"] .pillars-percorsi .percorsi-frame { background: none; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; }
