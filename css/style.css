@@ -887,7 +887,8 @@ html[data-theme="dark"] .pillars-percorsi .percorsi-frame { background: none; bo
 .percorso-dialog .booking-close { z-index: 1; background: rgba(255, 255, 255, 0.92); }
 @media (max-width: 700px) {
   .percorso-dialog[open] { display: block; overflow-y: auto; }
-  .percorso-photo { height: 38vh; max-height: none; }
+  /* su telefono la foto si vede intera (proporzioni originali); si taglia solo su schermi molto bassi */
+  .percorso-photo { height: auto; max-height: 62vh; object-position: 50% 40%; }
   .percorso-body { max-height: none; }
 }
 html[data-theme="dark"] .percorso-dialog .booking-close { background: rgba(21, 35, 28, 0.85); color: #e6f1ea; }
@@ -896,4 +897,4 @@ html[data-theme="dark"] .percorso-dialog h2 { color: #e6f1ea; }
 /* Scheda con foto orizzontale: colonne uguali per far stare tutti i cani */
 .percorso-dialog.percorso-flip[open] { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
 .percorso-flip .percorso-photo { object-position: 22% 50%; }
-@media (max-width: 700px) { .percorso-flip .percorso-photo { object-position: 30% 40%; } }
+@media (max-width: 700px) { .percorso-flip .percorso-photo { object-position: 50% 50%; } }
