@@ -882,14 +882,15 @@ html[data-theme="dark"] .pillars-percorsi .percorsi-frame { background: none; bo
 .percorso-dialog[open] { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); }
 .percorso-photo { width: 100%; height: 100%; max-height: calc(100dvh - 2rem); object-fit: cover; object-position: 50% 55%; display: block; }
 .percorso-body { padding: clamp(1.4rem, 4vw, 2.4rem); overflow-y: auto; max-height: calc(100dvh - 2rem); align-self: center; }
-.percorso-body p { margin: 0 0 1rem; font-size: 1rem; line-height: 1.7; }
+.percorso-body p { margin: 0 0 1rem; font-size: 0.97rem; line-height: 1.68; text-align: justify; text-align-last: left; hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 5 2 2; text-wrap: wrap; }
 .percorso-body p:last-child { margin-bottom: 0; }
 .percorso-dialog .booking-close { z-index: 1; background: rgba(255, 255, 255, 0.92); }
 @media (max-width: 700px) {
   .percorso-dialog[open] { display: block; overflow-y: auto; }
   /* su telefono la foto si vede intera (proporzioni originali); si taglia solo su schermi molto bassi */
   .percorso-photo { height: auto; max-height: 62vh; object-position: 50% 40%; }
-  .percorso-body { max-height: none; }
+  .percorso-body { max-height: none; padding: 1.3rem 1.15rem 1.5rem; }
+  .percorso-body p { font-size: 0.95rem; }
 }
 html[data-theme="dark"] .percorso-dialog .booking-close { background: rgba(21, 35, 28, 0.85); color: #e6f1ea; }
 html[data-theme="dark"] .percorso-dialog h2 { color: #e6f1ea; }
