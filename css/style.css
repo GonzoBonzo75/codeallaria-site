@@ -904,9 +904,20 @@ html[data-theme="dark"] .percorso-dialog h2 { color: #e6f1ea; }
 .pillars-storia .storia-text.storia-continua p { margin: 0; text-align: justify; text-align-last: left; hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 5 2 2; }
 @media (max-width: 760px) { .pillars-storia .storia-text.storia-continua p { font-size: 0.95rem; text-align: justify; } }
 
-/* Scheda con testo lungo: foto in alto e testo sotto; scorre tutta la scheda */
-.percorso-dialog.percorso-stack { width: min(36rem, calc(100% - 2rem)); overflow-y: auto; }
-.percorso-dialog.percorso-stack[open] { display: block; }
-.percorso-stack .percorso-photo { height: auto; max-height: none; aspect-ratio: 4 / 3; object-position: 50% 8%; }
-.percorso-stack .percorso-body { max-height: none; overflow: visible; }
-@media (max-width: 700px) { .percorso-stack .percorso-photo { aspect-ratio: auto; max-height: 62vh; } }
+/* Scheda rettangolare con testo lungo: foto a sinistra, il testo scorre nella colonna di destra */
+.percorso-dialog.percorso-rect { width: min(56rem, calc(100% - 2rem)); }
+.percorso-dialog.percorso-rect[open] { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); height: min(34rem, calc(100dvh - 2rem)); }
+.percorso-rect .percorso-photo { height: 100%; max-height: none; object-position: 50% 40%; }
+.percorso-rect .percorso-body { align-self: stretch; max-height: none; height: 100%; overflow-y: auto; scrollbar-width: thin; scrollbar-color: rgba(28, 61, 48, 0.35) transparent; }
+@media (max-width: 700px) {
+  .percorso-dialog.percorso-rect[open] { display: block; height: auto; overflow-y: auto; }
+  .percorso-rect .percorso-photo { height: auto; max-height: 62vh; }
+  .percorso-rect .percorso-body { height: auto; overflow: visible; }
+}
+
+/* Le tre schede dei percorsi hanno tutte le stesse dimensioni su computer */
+@media (min-width: 701px) {
+  .percorso-dialog.percorso-dialog[open] { display: grid; width: min(54rem, calc(100% - 2rem)); height: min(33rem, calc(100dvh - 2rem)); grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); overflow: hidden; }
+  .percorso-dialog .percorso-photo { height: 100%; max-height: none; aspect-ratio: auto; }
+  .percorso-dialog .percorso-body { height: auto; max-height: 100%; align-self: center; overflow-y: auto; scrollbar-width: thin; scrollbar-color: rgba(28, 61, 48, 0.35) transparent; }
+}
