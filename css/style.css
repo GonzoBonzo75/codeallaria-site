@@ -903,3 +903,10 @@ html[data-theme="dark"] .percorso-dialog h2 { color: #e6f1ea; }
 /* La nostra storia: testo in un solo blocco, giustificato con sillabazione (righe piene, niente buchi) */
 .pillars-storia .storia-text.storia-continua p { margin: 0; text-align: justify; text-align-last: left; hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 5 2 2; }
 @media (max-width: 760px) { .pillars-storia .storia-text.storia-continua p { font-size: 0.95rem; text-align: justify; } }
+
+/* Scheda con testo lungo: foto in alto e testo sotto; scorre tutta la scheda */
+.percorso-dialog.percorso-stack { width: min(36rem, calc(100% - 2rem)); overflow-y: auto; }
+.percorso-dialog.percorso-stack[open] { display: block; }
+.percorso-stack .percorso-photo { height: auto; max-height: none; aspect-ratio: 4 / 3; object-position: 50% 8%; }
+.percorso-stack .percorso-body { max-height: none; overflow: visible; }
+@media (max-width: 700px) { .percorso-stack .percorso-photo { aspect-ratio: auto; max-height: 62vh; } }
