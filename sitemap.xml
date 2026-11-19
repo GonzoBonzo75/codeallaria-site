@@ -60,4 +60,12 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://www.codeallaria.com/contatti.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.codeallaria.com/en/contact.html"/>
   </url>
+  <!-- BLOG-START -->
+  <url>
+    <loc>https://www.codeallaria.com/blog.html</loc>
+  </url>
+  <url>
+    <loc>https://www.codeallaria.com/blog/benvenuti-nel-nostro-blog.html</loc>
+  </url>
+  <!-- BLOG-END -->
 </urlset>

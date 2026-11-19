@@ -1,0 +1,33 @@
+# Area riservata del blog (Sveltia CMS). Si apre su www.codeallaria.com/admin
+backend:
+  name: github
+  repo: GonzoBonzo75/codeallaria-site
+  branch: main
+
+locale: it
+site_url: https://www.codeallaria.com
+display_url: https://www.codeallaria.com/blog.html
+logo_url: https://www.codeallaria.com/images/logo-quadrato.jpg
+
+media_folder: images/blog
+public_folder: /images/blog
+
+collections:
+  - name: blog
+    label: Articoli del blog
+    label_singular: Articolo
+    folder: content/blog
+    extension: md
+    format: frontmatter
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [date, title]
+    fields:
+      - { name: title, label: Titolo, widget: string }
+      - { name: date, label: Data di pubblicazione, widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
+      - { name: draft, label: "Bozza (se attivo l'articolo NON compare sul sito)", widget: boolean, default: false, required: false }
+      - { name: image, label: Foto di copertina, widget: image, required: false }
+      - { name: image_alt, label: Descrizione della foto (per chi non la vede), widget: string, required: false }
+      - { name: summary, label: Breve riassunto (compare nell'elenco degli articoli), widget: text }
+      - { name: body, label: Testo dell'articolo, widget: markdown }

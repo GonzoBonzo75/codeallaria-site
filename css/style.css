@@ -914,3 +914,97 @@ html[data-theme="dark"] .percorso-dialog h2 { color: #e6f1ea; }
   .percorso-rect .percorso-photo { height: auto; max-height: 62vh; }
   .percorso-rect .percorso-body { height: auto; overflow: visible; }
 }
+
+/* Blog: elenco degli articoli e pagina dell'articolo (stesso prato e riquadro de "La nostra storia") */
+.pillars-blog .pillars-inner { max-width: 50rem; }
+.pillars-articolo h1 { font-size: clamp(1.45rem, 3.4vw, 2rem); text-align: center; }
+.pillars-blog h1, .pillars-blog .divider { margin-left: auto; margin-right: auto; text-align: center; }
+.pillars-blog .storia-text { text-align: left; }
+
+.blog-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.1rem; }
+.blog-card {
+  display: flex;
+  align-items: stretch;
+  gap: 1.2rem;
+  padding: 0.8rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 16px rgba(28, 61, 48, 0.1);
+  color: var(--ink);
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.blog-card:hover, .blog-card:focus-visible { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(28, 61, 48, 0.18); }
+.blog-card:focus-visible { outline: 2px solid rgba(213, 122, 47, 0.8); outline-offset: 2px; }
+.blog-thumb {
+  flex: 0 0 9rem;
+  width: 9rem;
+  height: 9rem;
+  object-fit: cover;
+  object-position: 50% 35%;
+  border-radius: 12px;
+}
+.blog-card-text { display: flex; flex-direction: column; gap: 0.35rem; min-width: 0; justify-content: center; }
+.blog-card time { font-size: 0.82rem; font-weight: 600; color: var(--orange); letter-spacing: 0.02em; }
+.blog-card strong { font-family: "Playfair Display", Georgia, serif; font-size: 1.2rem; line-height: 1.25; }
+.blog-summary { font-size: 0.95rem; line-height: 1.55; color: #3d5a4d; }
+.blog-vuota { margin: 0; text-align: center; font-size: 1.05rem; }
+
+.blog-meta { margin: 0 0 1.2rem; font-size: 0.9rem; font-weight: 600; text-align: center; color: #4a5c55; }
+.blog-meta a { color: var(--ink); text-decoration: none; border-bottom: 2px solid var(--orange); }
+.blog-meta time { color: var(--orange); }
+.blog-cover {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: min(26rem, 46dvh);
+  margin: 0 auto 1.6rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(28, 61, 48, 0.18);
+}
+.blog-body { color: var(--ink); }
+.blog-body p, .blog-body li {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--ink);
+  text-align: justify;
+  text-align-last: left;
+  hyphens: auto;
+  hyphenate-limit-chars: 5 2 2;
+  text-wrap: wrap;
+}
+.blog-body p { margin: 0 0 1.1rem; }
+.blog-body h2, .blog-body h3 { font-family: "Playfair Display", Georgia, serif; color: var(--ink); line-height: 1.3; margin: 1.8rem 0 0.7rem; text-align: left; }
+.blog-body h2 { font-size: 1.4rem; }
+.blog-body h3 { font-size: 1.15rem; }
+.blog-body ul, .blog-body ol { margin: 0 0 1.1rem; padding-left: 1.4rem; }
+.blog-body a { color: var(--ink); text-decoration-color: var(--orange); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.blog-body blockquote { margin: 1.2rem 0; padding: 0.2rem 1.1rem; border-left: 4px solid var(--orange); font-style: italic; }
+.blog-body img { display: block; max-width: 100%; height: auto; margin: 1.4rem auto; border-radius: 14px; box-shadow: 0 6px 18px rgba(28, 61, 48, 0.16); }
+.blog-back { margin: 2rem 0 0.4rem; text-align: center; }
+.blog-back .btn { color: #fff; }
+
+@media (max-width: 760px) {
+  .blog-card { gap: 0.8rem; padding: 0.6rem; }
+  .blog-thumb { flex-basis: 5.6rem; width: 5.6rem; height: 5.6rem; }
+  .blog-card strong { font-size: 1.05rem; }
+  .blog-summary { font-size: 0.9rem; }
+  .blog-body p, .blog-body li { font-size: 0.95rem; }
+}
+
+html[data-theme="dark"] .blog-card { background: rgba(20, 34, 27, 0.85); color: #e6f0ea; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35); }
+html[data-theme="dark"] .blog-summary { color: #b9cabf; }
+html[data-theme="dark"] .blog-meta { color: #aebfb5; }
+html[data-theme="dark"] .blog-meta a, html[data-theme="dark"] .blog-body a { color: #e6f0ea; }
+html[data-theme="dark"] .blog-body, html[data-theme="dark"] .blog-body p, html[data-theme="dark"] .blog-body li,
+html[data-theme="dark"] .blog-body h2, html[data-theme="dark"] .blog-body h3 { color: #dbe8e0; }
+html[data-theme="dark"] .pillars-blog h1 { color: #f1f6f3; }
+
+/* Con la voce "Blog" il menu ha 7 link: sugli schermi medi li stringiamo un po' */
+@media (min-width: 1101px) and (max-width: 1360px) {
+  .nav { gap: clamp(0.7rem, 1.35vw, 1.4rem); }
+  .nav a { font-size: 0.9rem; }
+}
+/* Elenco articoli: il riquadro si adatta al contenuto (non occupa tutta l'altezza) */
+.pillars-storia .storia-text.blog-frame { flex: 0 1 auto; }
