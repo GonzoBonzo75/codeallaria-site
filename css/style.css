@@ -1008,3 +1008,28 @@ html[data-theme="dark"] .pillars-blog h1 { color: #f1f6f3; }
 }
 /* Elenco articoli: il riquadro si adatta al contenuto (non occupa tutta l'altezza) */
 .pillars-storia .storia-text.blog-frame { flex: 0 1 auto; }
+
+/* Foto della home: la nuova foto è verticale, quindi su schermo largo sta in un riquadro a destra */
+.hero .photo { object-position: 50% 24%; }
+@media (min-width: 761px) {
+  .hero .photo {
+    inset: auto;
+    top: 5.8rem;
+    right: clamp(1.5rem, 6vw, 5rem);
+    bottom: calc(var(--footer-h) + 1.8rem);
+    width: min(38vw, 34rem);
+    height: auto;
+    z-index: 2;
+    object-position: 50% 30%;
+    border-radius: 28px;
+    box-shadow: 0 14px 40px rgba(28, 61, 48, 0.28);
+  }
+  .hero::before {
+    background:
+      linear-gradient(90deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.3) 60%, rgba(255,255,255,0.1) 100%),
+      rgba(255,255,255,0.1);
+  }
+  .hero { background: url("../images/prato.jpg") center / cover; }
+  .hero-text { max-width: min(38rem, calc(100% - min(38vw, 34rem) - 2rem)); }
+}
+@media (max-width: 760px) { .hero .photo { object-position: 50% 20%; } }
