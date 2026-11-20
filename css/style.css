@@ -915,6 +915,13 @@ html[data-theme="dark"] .percorso-dialog h2 { color: #e6f1ea; }
   .percorso-rect .percorso-body { height: auto; overflow: visible; }
 }
 
+/* Scheda con foto verticale mostrata per intero (senza tagli): la colonna della foto prende la sua larghezza naturale */
+@media (min-width: 701px) {
+  .percorso-dialog.percorso-rect.percorso-intera { width: min(58rem, calc(100% - 2rem)); }
+  .percorso-dialog.percorso-rect.percorso-intera[open] { grid-template-columns: auto minmax(0, 1fr); }
+  .percorso-rect.percorso-intera .percorso-photo { width: auto; height: 100%; aspect-ratio: 3 / 4; object-fit: contain; }
+}
+
 /* Blog: elenco degli articoli e pagina dell'articolo (stesso prato e riquadro de "La nostra storia") */
 .pillars-blog .pillars-inner { max-width: 50rem; }
 .pillars-articolo h1 { font-size: clamp(1.45rem, 3.4vw, 2rem); text-align: center; }
