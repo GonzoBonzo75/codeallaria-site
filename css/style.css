@@ -1019,7 +1019,6 @@ html[data-theme="dark"] .pillars-blog h1 { color: #f1f6f3; }
     bottom: calc(var(--footer-h) + 1.8rem);
     width: min(38vw, 34rem);
     height: auto;
-    z-index: 2;
     object-position: 50% 30%;
     border-radius: 28px;
     box-shadow: 0 14px 40px rgba(28, 61, 48, 0.28);
