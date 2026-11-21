@@ -906,7 +906,7 @@ html[data-theme="dark"] .percorso-dialog h2 { color: #e6f1ea; }
 
 /* Scheda rettangolare con testo lungo: foto a sinistra, il testo scorre nella colonna di destra */
 .percorso-dialog.percorso-rect { width: min(56rem, calc(100% - 2rem)); }
-.percorso-dialog.percorso-rect[open] { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); height: min(34rem, calc(100dvh - 2rem)); }
+.percorso-dialog.percorso-rect[open] { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); height: min(var(--scheda-h, 34rem), calc(100dvh - 2rem)); }
 .percorso-rect .percorso-photo { height: 100%; max-height: none; object-position: 50% 40%; }
 .percorso-rect .percorso-body { align-self: stretch; max-height: none; height: 100%; overflow-y: auto; scrollbar-width: thin; scrollbar-color: rgba(28, 61, 48, 0.35) transparent; }
 @media (max-width: 700px) {
@@ -919,7 +919,7 @@ html[data-theme="dark"] .percorso-dialog h2 { color: #e6f1ea; }
 @media (min-width: 701px) {
   .percorso-dialog.percorso-rect.percorso-intera { width: min(58rem, calc(100% - 2rem)); }
   .percorso-dialog.percorso-rect.percorso-intera[open] { grid-template-columns: auto minmax(0, 1fr); }
-  .percorso-rect.percorso-intera .percorso-photo { width: auto; height: 100%; aspect-ratio: 3 / 4; object-fit: contain; }
+  .percorso-rect.percorso-intera .percorso-photo { width: auto; height: 100%; aspect-ratio: var(--foto-ratio, 3 / 4); object-fit: contain; }
 }
 
 /* Blog: elenco degli articoli e pagina dell'articolo (stesso prato e riquadro de "La nostra storia") */
