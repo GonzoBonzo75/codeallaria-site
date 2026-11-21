@@ -7,4 +7,4 @@ image_alt: ''
 summary: Piccole pillole cinofile
 ---
 
-Con questo primo articolo inauguriamo il blog di **Code all'Aria**: uno spazio dove raccontare le nostre giornate, i percorsi che proponiamo e le piccole cose che imparano, ogni giorno, i cani e chi vive con loro.
+Piccole pillole cinofile
