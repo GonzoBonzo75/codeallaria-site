@@ -427,6 +427,10 @@ body {
   pointer-events: none;
 }
 .site-footer p { margin: 0; color: rgba(213, 122, 47, 0.78); font-size: 0.9rem; font-weight: 600; text-align: center; }
+.site-footer { flex-direction: column; justify-content: flex-end; align-items: center; gap: 0.1rem; }
+.site-footer p.credit { font-size: 0.72rem; font-weight: 500; color: rgba(213, 122, 47, 0.6); }
+.site-footer p.credit a { color: inherit; text-decoration: underline; text-underline-offset: 2px; pointer-events: auto; }
+.site-footer p.credit a:hover { color: rgba(213, 122, 47, 1); }
 
 /* Finestra di prenotazione */
 .booking {
