@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Il kennel - Code all&#x27;Aria</title>
+  <meta name="description" content="Il kennel non è una prigione.">
+  <link rel="canonical" href="https://www.codeallaria.com/blog/il-kennel.html">
+  <link rel="icon" type="image/jpeg" href="/images/logo-quadrato.jpg">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:title" content="Il kennel - Code all&#x27;Aria">
+  <meta property="og:description" content="Il kennel non è una prigione.">
+  <meta property="og:url" content="https://www.codeallaria.com/blog/il-kennel.html">
+  <meta property="og:image" content="https://www.codeallaria.com/images/blog-web/WhatsApp Image 2026-11-27 at 12.01.41-1200.jpg">
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/playfair-display-700.woff2" crossorigin>
+  <script>try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="page-light">
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Code all'Aria - Home">
+      <img class="logo-light" src="/images/logo.jpg" width="1489" height="835" alt="Logo Code all'Aria - Crescere Insieme, Percorsi Evolutivi per Cani">
+      <img class="logo-dark" src="/images/logo-scuro.png" width="800" height="449" alt="" aria-hidden="true">
+    </a>
+    <nav class="nav" id="menu-principale" aria-label="Menu principale">
+      <a href="/">Home</a>
+      <a href="/pilastri.html">I punti fermi</a>
+      <a href="/percorsi.html">I nostri percorsi</a>
+      <a href="/storia.html">La nostra storia</a>
+      <a href="/staff.html">Lo staff</a>
+      <a class="active" aria-current="page" href="/blog.html">Blog</a>
+      <a href="/contatti.html">Contatti</a>
+      <a class="nav-prenota" href="#prenota" data-booking>Prenota ora</a>
+    </nav>
+    <a class="btn btn-orange btn-small header-prenota" href="#prenota" data-booking>Prenota ora</a>
+    <button class="theme-toggle" type="button" aria-label="Attiva la versione scura" aria-pressed="false"><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.2A8.2 8.2 0 0 1 9.8 4a8.2 8.2 0 1 0 10.2 10.2z"/></svg><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/></svg></button>
+    <a class="lang-toggle" href="/en/" hreflang="en" lang="en" aria-label="Read the site in English" title="English">EN</a>
+    <button class="nav-toggle" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="menu-principale"><span></span><span></span><span></span></button>
+  </header>
+
+  <main class="pillars pillars-prato pillars-storia pillars-blog pillars-articolo">
+    <div class="pillars-inner">
+      <h1>Il kennel</h1>
+      <span class="divider" aria-hidden="true"></span>
+      <div class="storia-text blog-post" tabindex="0" role="region" aria-label="Il kennel">
+        <p class="blog-meta"><a href="/blog.html">&larr; Tutti gli articoli</a><span aria-hidden="true"> · </span><time datetime="2026-11-27">27 novembre 2026</time></p>
+        <img class="blog-cover" src="/images/blog-web/WhatsApp Image 2026-11-27 at 12.01.41-1200.jpg" width="800" height="504" alt="">
+        <div class="blog-body">
+<p>Contrariamente a una convinzione purtroppo ancora diffusa, il kennel non è una prigione. Il suo scopo non è quello di tenere il cane chiuso dentro ma il resto del mondo chiuso fuori. Gli offre una tana sicura dove rilassarsi e, non dimentichiamolo, è il modo più sicuro per trasportarlo in auto. Abituate gradualmente il vostro cucciolo all’uso del kennel (come luogo dove nulla potrà nuocergli o disturbarlo) e lui sarà felice di schiacciarci dei pisolini da fare invidia.</p>
+        </div>
+        <p class="blog-back"><a class="btn btn-orange btn-small" href="/blog.html">Tutti gli articoli</a></p>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <p>Code all'Aria - tutti i diritti riservati - 2026</p>
+  </footer>
+  <script>
+    (function () {
+      var main = document.querySelector(".pillars-storia");
+      var frame = document.querySelector(".storia-text");
+      if (!main || !frame) return;
+      main.addEventListener("wheel", function (e) {
+        if (frame.contains(e.target)) return;
+        frame.scrollTop += e.deltaY;
+      }, { passive: true });
+    })();
+  </script>
+  <script src="/js/nav.js" defer></script>
+  <script src="/js/booking.js" defer></script>
+</body>
+</html>
