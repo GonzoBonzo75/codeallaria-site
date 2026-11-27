@@ -1043,3 +1043,20 @@ html[data-theme="dark"] .pillars-blog h1 { color: #f1f6f3; }
   .hero-text { max-width: min(38rem, calc(100% - min(38vw, 34rem) - 2rem)); }
 }
 @media (max-width: 760px) { .hero .photo { object-position: 50% 20%; } }
+
+/* Home, tema scuro su schermo largo: stesso prato scurito delle altre pagine
+   (prima restava un fondo piatto), velo più leggero sulla foto */
+@media (min-width: 761px) {
+  html[data-theme="dark"] .hero {
+    background:
+      linear-gradient(180deg, rgba(8,18,13,0.5) 0%, rgba(8,18,13,0.62) 100%),
+      url("../images/prato.jpg") center bottom / cover no-repeat,
+      #1d3a22;
+  }
+  html[data-theme="dark"] .hero::before {
+    background:
+      linear-gradient(90deg, rgba(8,18,13,0.45) 0%, rgba(8,18,13,0.2) 60%, rgba(8,18,13,0) 100%),
+      rgba(8,18,13,0.12);
+  }
+  html[data-theme="dark"] .hero .photo { box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55); }
+}
